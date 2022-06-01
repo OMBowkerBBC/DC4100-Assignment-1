@@ -1,0 +1,508 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{caption}
+
+\title{UBER Analysis and Self Driving Implementation (DC4100)}
+\author{Oliver Matthew Bowker (220263618)}
+\date{\today}
+\begin{document}
+
+    \maketitle
+    \begin{center}
+      \includegraphics[width=5cm]{assets/uber_logo.png}
+    \end{center}
+    \newpage
+
+    \tableofcontents
+    \newpage
+
+    \section{Introduction}
+    Uber is ride-sharing company that was first created in March 2009 [1] and has since become one of the most well known companies in the world.
+    Uber describes itself as being:
+    \begin{quote}
+      \textit{'a tech company that connects the physical and digital worlds to help make movement happen at the tap of a button.'} [2]
+    \end{quote}
+    Alongside it's ride-sharing apps, for both riders and drivers, it also has Uber Eats which is a takeaway delivery service, providing apps for restaurants,
+    deliverers and customers. However for this report I will only be focussing on the ride-sharing aspect of the company.
+
+    Within this report I aim to create documentation that represents Uber from both an application and business level using tools such as 
+    use case diagrams, sequence diagrams, Archimate and more. This report was written with some insights from this \href{https://learn-eu-central-1-prod-fleet01-xythos.content.blackboardcdn.com/5d2cb9c32e9d7/4991549?X-Blackboard-Expiration=1653922800000&X-Blackboard-Signature=a2RnywjBpwblbDHmnp%2BXEpXu5N%2FFoCmkQs%2FBPlAAUAo%3D&X-Blackboard-Client-Id=163100&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27Reading1-Uber-CaseStudy%2520%25281%2529.hai.pdf&response-content-type=application%2Fpdf&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBgaDGV1LWNlbnRyYWwtMSJGMEQCIHIn%2BZn3gy3MjoPp7PH8o8SnEhgHocgjO0CPywLkcPIXAiAIwi1oSntPYzMUdrA%2FGVOy4wq4jKDGcCVfnD7ffXaIkSrcBAgREAIaDDYzNTU2NzkyNDE4MyIMbRXWMdMQ5uaeyu%2BXKrkEseD2PJmHV%2Fj1ElO5YaeFrgTrUJewyFaGJTLDptki%2Fw6Q%2Bfwo0H6dymEdL4rI6suCDdx2RwJxWKHNCDeFPFh15O0H6KG3qCcX%2FovlcsZ%2Bh499B6hJiMWnFXvUnuWaPcx%2BV6e01ECkcMfeo7brbj8ESEg6SQIJ1nX5BXlg7UtRDLXTosDkKcWx7v1BCND32q1UkRbr%2Bs5J4iZpddBWaxLUsea0LF%2BjlQiS8%2FXREUTvbtgPmNRLSuQAbM7KWHTnEZvsbWOvwSG8nkcbQE8yTiQFrpoRUuWYt33NAVg6HXxNAwqTHGcVA8nbiPt2bN%2FLjEt344CUJYG0gA35UCtYf3DR0PrCzbrV2pEVioy0%2FX9Kvvbv2h1WYHvGD1Q%2BvrXMhizyd2InWYiU1X4EeMC7Im1rHbYt0qo3RXKqZlzNxM%2F0zaNe0IRkbsGQJarkF5DP3bz7NeU188afhSfu7T6xYhAajAVrnGxhooCc3YI66br60NygfY2OAp2MeKI6dzNw0FdfsaA31f%2BZasU9n2aP3weV7AwZvaGMpGoXahuvjnJ9mKuWKc6HrWu8HPJhq7Wr3mOC9bd8YBDG2WzIrB9kM45iNQOTG67CMF5x7eXj4KNVntZgG63Jn%2BBxiVLgIxMR55%2BsA0IkQ9DXQoj0esQ2J3JBystYLTp79c5N5hB4iUr1w4i%2Fm20B1XVarZjUTObKPU%2FOhVMd2J0L3G3zBNVRH0el8n8UoO1L8s8M%2BITAhjLhoOO7%2BLkRlFfNmSUwpPvRlAY6qgH6gVLQCu8%2B4x1Gr4OZSSDIGJg8JceJGTGUuQTC4zObK%2FZFQf%2BCrgd5Yq9gmyB%2BAOERsBIpT6ovUVoNUY5CAx%2FHixZ6KneGKse3MAew4DX1G%2BVgC9yLWmgKAHtv0GZxfXyNshE3L9BSYbygxLiRZTj%2BEnF1Sb5WuM%2FANwhzfr%2Fv7xbJO8gk6ThTqegZJ%2FVz13WjTdieKNSwy4yyux01cLEanOenPhlqjOhSpg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220530T090000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=ASIAZH6WM4PL5GS33QWA%2F20220530%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=3bdd17adaf97b1927bdb8b06a7be5ddc78ca982d1660562cfa92729d6cdc622f}{\textbf{case study}}.
+
+    \textbf{Tools used} - To create my diagrams I have solely used \href{draw.io}{\textbf{draw.io}}. The creation of the report was done using LaTeX and is stored in 
+    this \href{https://github.com/OMBowkerBBC/DC4100-Assignment-1}{\textbf{github repository}}.
+    \newpage
+  
+    \section{Requirements and Use Cases}
+    In this section of the report I will create a use case diagram containing the relevant actors of th system and break down why they are there. After I will
+    take one of these use cases and expand on it in a use case description. Finally I will list some of the user requirements and functional and non-functional system
+    requirements.
+
+    \subsection{Use Cases}
+    The first thing to do is identify all the potential stakeholders for the project. Below is a viewpoint hierarchy I created to represent these stakeholder.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=12cm]{assets/viewpoints.drawio.png}
+      \caption{Viewpoint hierarchy for Uber app.}
+      \label{fig:viewpoints}
+    \end{figure}
+
+    From this I was then able to 'pull' some of these stakeholders out of this viewpoint hierarchy and create my use case diagram, which can be seen in full at \hyperref[sec:AppendixA]{\textbf{Appendix A}}.
+    
+    \newpage
+    \subsubsection{Driver/Rider}
+    The biggest actor in the Uber ecosystem has to be the customer. Within the case study for this report the authors claim:
+    \begin{quote}
+      \textit{'drivers are “end-users” of the application'}
+    \end{quote}
+    whilst citing Ubers' contract to UK drivers. For this reason I have grouped them closely here.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{assets/customer_use_case.drawio.png}
+      \caption{Figure showing the rider and driver in the use case diagram.}
+      \label{fig:customerUseCase}
+    \end{figure}
+
+    Both \textbf{rider} and \textbf{driver} actors share a few use cases. Both can create accounts, request emergency assistance during the ride and,
+    optionally, cancel a requested/accepted ride. They're is also a link, in functionality not in use case, between 'Confirm Ride Completion' and 
+    'Receive Ride End Notification' as the driver triggers the latter for the user. This will be discussed more later in the report.
+
+    For the rider I have two separate use cases 'Request Ride' and 'Schedule Ride' which seem extremely similar. The 'Request Ride' use case is solely 
+    referring to a rider getting a ride now, whereas scheduled is at a later date. I believe as these use cases are documented at a lower level larger 
+    differences in functionality will appear. For this reason I have put them as separate use cases.
+
+    \newpage
+    \subsubsection{Payment Processor}
+      The \textbf{payment processor} actor in the diagram represents an external third party that is used to handle monetary transactions in the Uber ecosystem.
+      In a real world application this could be a company such as Stripe [3]. The use cases are mostly simple, with the main functionality handling the processing of 
+      ride payments and tips, the only bit of other functionality is the validation of the payment, which can fail and therefore needs to send back a 
+      validation error in this case.
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{assets/pp_use_case.drawio.png}
+        \caption{Figure showing the payment processor actor in the use case diagram.}
+        \label{fig:ppUseCase}
+      \end{figure}
+
+    \subsubsection{Other Actors}
+      There are some smaller actors that play a role in the system. The first being a \textbf{customer service representative}, which is responsible for accepting user
+      complaints/issues. I have included an optional/extend 'Direct to Automated System' use case as in the \href{https://learn-eu-central-1-prod-fleet01-xythos.content.blackboardcdn.com/5d2cb9c32e9d7/4991549?X-Blackboard-Expiration=1653922800000&X-Blackboard-Signature=a2RnywjBpwblbDHmnp%2BXEpXu5N%2FFoCmkQs%2FBPlAAUAo%3D&X-Blackboard-Client-Id=163100&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27Reading1-Uber-CaseStudy%2520%25281%2529.hai.pdf&response-content-type=application%2Fpdf&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBgaDGV1LWNlbnRyYWwtMSJGMEQCIHIn%2BZn3gy3MjoPp7PH8o8SnEhgHocgjO0CPywLkcPIXAiAIwi1oSntPYzMUdrA%2FGVOy4wq4jKDGcCVfnD7ffXaIkSrcBAgREAIaDDYzNTU2NzkyNDE4MyIMbRXWMdMQ5uaeyu%2BXKrkEseD2PJmHV%2Fj1ElO5YaeFrgTrUJewyFaGJTLDptki%2Fw6Q%2Bfwo0H6dymEdL4rI6suCDdx2RwJxWKHNCDeFPFh15O0H6KG3qCcX%2FovlcsZ%2Bh499B6hJiMWnFXvUnuWaPcx%2BV6e01ECkcMfeo7brbj8ESEg6SQIJ1nX5BXlg7UtRDLXTosDkKcWx7v1BCND32q1UkRbr%2Bs5J4iZpddBWaxLUsea0LF%2BjlQiS8%2FXREUTvbtgPmNRLSuQAbM7KWHTnEZvsbWOvwSG8nkcbQE8yTiQFrpoRUuWYt33NAVg6HXxNAwqTHGcVA8nbiPt2bN%2FLjEt344CUJYG0gA35UCtYf3DR0PrCzbrV2pEVioy0%2FX9Kvvbv2h1WYHvGD1Q%2BvrXMhizyd2InWYiU1X4EeMC7Im1rHbYt0qo3RXKqZlzNxM%2F0zaNe0IRkbsGQJarkF5DP3bz7NeU188afhSfu7T6xYhAajAVrnGxhooCc3YI66br60NygfY2OAp2MeKI6dzNw0FdfsaA31f%2BZasU9n2aP3weV7AwZvaGMpGoXahuvjnJ9mKuWKc6HrWu8HPJhq7Wr3mOC9bd8YBDG2WzIrB9kM45iNQOTG67CMF5x7eXj4KNVntZgG63Jn%2BBxiVLgIxMR55%2BsA0IkQ9DXQoj0esQ2J3JBystYLTp79c5N5hB4iUr1w4i%2Fm20B1XVarZjUTObKPU%2FOhVMd2J0L3G3zBNVRH0el8n8UoO1L8s8M%2BITAhjLhoOO7%2BLkRlFfNmSUwpPvRlAY6qgH6gVLQCu8%2B4x1Gr4OZSSDIGJg8JceJGTGUuQTC4zObK%2FZFQf%2BCrgd5Yq9gmyB%2BAOERsBIpT6ovUVoNUY5CAx%2FHixZ6KneGKse3MAew4DX1G%2BVgC9yLWmgKAHtv0GZxfXyNshE3L9BSYbygxLiRZTj%2BEnF1Sb5WuM%2FANwhzfr%2Fv7xbJO8gk6ThTqegZJ%2FVz13WjTdieKNSwy4yyux01cLEanOenPhlqjOhSpg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220530T090000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=ASIAZH6WM4PL5GS33QWA%2F20220530%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=3bdd17adaf97b1927bdb8b06a7be5ddc78ca982d1660562cfa92729d6cdc622f}{\textbf{case study}}
+      it states that when drivers make complaints they \textit{'believe that software is creating initial responses based on the keywords in their text'}.
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{assets/csr_use_case.drawio.png}
+        \caption{Figure showing the CSR actor in the use case diagram.}
+        \label{fig:csrUseCase}
+      \end{figure}
+
+      The final actor is the \textbf{Police/Authorities}. I have included this actor as Uber offers a function to both rider and river that allows them to contact
+      the emergency services in case something is going or has gone wrong with their current ride.
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{assets/authorities_use_case.drawio.png}
+        \caption{Figure showing the Police/Authorities actor in the use case diagram.}
+        \label{fig:authoritiesUseCase}
+      \end{figure}
+
+    \begin{center}      
+    \begin{tabular}[H]{|p{14cm}|p{6cm}|}
+      \hline
+      \textbf{Use Case Number:} 1 \vline \textbf{Use Case Name:} Receive Ride End Notification \\
+      \hline
+      \textbf{Goal:} To notify the rider once their ride has concluded. \\
+      \hline
+      \textbf{Brief Description:} This use case happens when a driver has completed the drop off of a rider to their specified location. This notification leads the user
+      to being able to leave a tip and a rating for their ride. Although the primary path does not contain both of these, the ideal situation is for the rider to leave a review
+      for their driver. \\
+      \hline
+      \textbf{Actors:} \newline The Driver as they have to confirm the completion for the notification to be sent. \newline The Rider as they are the recipient of the notification. \\
+      \hline
+      \textbf{Frequency of Execution:} Hundreds of thousands of rides a day are completed using Uber. \\
+      \hline
+      \textbf{Scalability:} Uber must be able to support millions of requests for this use case on special occasions/events. \\
+      \hline
+      \textbf{Criticality:} This is an extremely important feature due to rider being able to rate the driver at this point, which allows Uber to manage the quality of their drivers through their rating system. \\
+      \hline
+      \textbf{Other non-functional Requirements:} None identified. \\
+      \hline
+      \textbf{Preconditions:} The rider must have already requested and been accepted for a ride and arrived at their destination. The driver of that ride must have also confirmed the drop off.
+      Both rider and driver must also already have signed up and be able to use all functionality the app offers. \\
+      \hline
+      \textbf{Postconditions:} None identified. \\
+      \hline
+      \textbf{Primary Path:} 
+      \begin{enumerate}
+        \item Customer is dropped off at their specified location.
+        \item The customer receives a notification that their ride has ended.
+        \item The customer clicks on that notification and is taken to the review ride/driver screen.
+        \item The customer leaves a review of their ride/driver.
+        \item The customer is ends up back on the home page and is able to request a new ride.
+      \end{enumerate} \\
+      \hline
+      \textbf{Use cases related to primary path:} Leave a Review \\
+      \hline
+      \textbf{Alternatives:} 
+      \begin{enumerate}[label=]
+        \item 3.1 The customer directly navigates to the app without the notification and is still taken to review ride/driver screen.
+        \item 4.1 The customer follows the primary path and also leaves a tip for the driver.
+        \item 4.2 The customer doesn't leave a review and goes straight back to the home page.
+      \end{enumerate} \\
+      \hline
+      \textbf{Use cases related to alternatives:} Leave a Review, Leave a Tip \\
+      \hline
+      \textbf{Exceptions:} The rider in question has notifications disabled on their device. \\
+      \hline
+      \textbf{Use cases related to exceptions:} None identified. \\
+      \hline
+      \textbf{Notes:} N/A \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+    \subsection{Requirements}
+
+    \begin{enumerate}
+      \item The system \textbf{must} allow a rider to request a ride.
+      \begin{enumerate}[label=1.\arabic{*}]
+        \item A rider \textbf{must} be able to select a pickup point.
+        \begin{enumerate}[label=1.1.\arabic{*}]
+          \item A rider \textbf{must} be able to manually enter a postcode or location for their pickup point.
+          \item A rider \textbf{should} be able to use their current location (calculated via GPS) as their pickup point.
+        \end{enumerate}
+        \item A rider \textbf{must} be able to specify a drop off point.
+        \item A rider \textbf{must} be able to choose the type of vehicle it needs, e.g. number of seats, mobility support etc.
+        \item A rider \textbf{must} be able to cancel a ride.
+        \item A rider \textbf{should} receive push notifications on updates to their ride.
+        \begin{enumerate}[label=1.5.\arabic{*}]
+          \item A rider \textbf{should} receive a notification to leave a rating for their journey.
+          \item A rider \textbf{should} receive a notification on ride accepted.
+          \item A rider \textbf{should} receive a notification on ride cancelled.
+          \item A rider \textbf{could} receive a notification on how far the driver is away.
+        \end{enumerate}
+        \item A rider \textbf{should} be able to see the route the driver is going to take to their destination.
+        \item A rider \textbf{could} be able to alter the exact location of drop off and pickup points.
+        \item A rider \textbf{could} be able to leave notes to help the driver find the pickup point.
+      \end{enumerate}
+
+      \vspace{.5cm}
+      \item The system \textbf{must} be able to take payment from a rider for a selected journey.
+      \begin{enumerate}[label=2.\arabic*]
+        \item The system \textbf{must} be able accept credit/debit payments.
+        \item The system \textbf{should} be able to accept mobile payments from Google and Apple.
+        \item The system \textbf{could} accept cryptocurrency payments, with consent from the driver.
+        \item The system \textbf{won't} accept cash as a payment.
+      \end{enumerate}
+
+      \vspace{.5cm}
+      \item The system \textbf{must} allow both riders and drivers to sign up to the service.
+      \begin{enumerate}[label=3.\arabic{*}]
+        \item A customer (Rider/Driver) \textbf{must} be given a form to enter their:
+        \begin{itemize}
+          \item name
+          \item email
+          \item phone number
+          \item password
+          \item banking details
+        \end{itemize}
+        \begin{enumerate}[label=3.1.\arabic{*}]
+          \item A customer \textbf{must} be shown any inputs that fail validation.
+          \item A customers banking details \textbf{must} be valid.
+          \item A customers phone number \textbf{should} be validated using regex.
+          \item A customers email \textbf{should} be validated using regex.
+          \item A customers password \textbf{could} be checked for strength.
+        \end{enumerate}
+        \item Uber \textbf{must} check a drivers background to align with regulations in that drivers area.
+        \item A customer (Rider/Driver) \textbf{must} be shown the terms and conditions.
+        \begin{enumerate}[label=3.3.\arabic{*}]
+          \item A customer (Rider/Driver) \textbf{must} accept the terms and conditions.
+          \item A customer (Rider/Driver) \textbf{should} have to scroll through before accepting the terms and conditions.
+        \end{enumerate}
+        \item A customer (Rider/Driver) \textbf{should} be notified on successful sign up.
+        \item A customer (Rider/Driver) \textbf{should} not have to sign in again on the device they successfully signed up on.
+        \item A customer (Rider/Driver) \textbf{could} be able to sign up using a third party (Google, Facebook etc.).
+      \end{enumerate}
+
+      \vspace{.5cm}
+      \item The system \textbf{must} offer safety features for customers (both rider and drivers).
+      \begin{enumerate}[label=4.\arabic{*}]
+        \item The system \textbf{must} anonymise customers phone numbers to prevent communication after a ride.
+        \item The system \textbf{must} have a way for customers to alert authorities in the event of an incident.
+        \begin{itemize}
+          \item Police
+          \item Fire Department
+          \item Ambulance
+        \end{itemize}
+        \item Uber \textbf{must} run DBS and background checks on all drivers.
+        \item The system \textbf{should} allow riders to share their trip with friends and family.
+        \item The system \textbf{could} monitor a ride for deviations of route or expected travel time and contact the rider to make sure nothing has happened
+      \end{enumerate}
+    \end{enumerate}
+
+    \newpage
+    \section{Activity and Sequence Diagrams}
+    Now that the use cases and requirements for Uber have been identified, I will now create activity and sequence diagrams to show how these high
+    level use cases can be implemented into a system. 
+    
+    \subsection{Activity Diagram}
+
+    Below is an activity diagram that represents the 'Schedule Ride' use case previously identified.
+    This diagram assumes that the user has already signed up to the app, so this is not included and does not model anything after the rider and driver have met.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=11.5cm]{assets/activity_diagram.drawio.png}
+      \caption{Figure showing activity diagram for Rider schedules a ride.}
+      \label{fig:activityDiagram}
+    \end{figure}
+
+    \newpage
+    The rider must first select the schedule ride option within the app then they hit two activities in a row where they have to enter a date and drop off/pick up 
+    points, these activities both have \textit{invalid} events that trigger error messages until the rider enters correct details. The booking/route can then be previewed
+    and once again loops until the riders payment doesn't fail.
+
+    The rider is then given the decision to share their journey, otherwise they go straight to the 'Wait Until Date' state. Whilst in this state the user can cancel 
+    their ride and the system then makes a decision whether or not to refund the user, based on timeliness of cancellation. This is an exception to the happy/primary path.
+
+    After the scheduled date is hit, drivers are then sent notification of the ride and then once again hit some state this time waiting for a driver to accept the ride.
+    Once a driver accepts a ride a decision is modeled to show whether or not the rider accepts notifications on their device, if they do a notification is sent, 
+    otherwise the flow continues. The driver then decides whether or not to cancel the ride, if they do the same notification logic is done as before, with a different
+    message, and the drivers are once again notified of the available ride. If the driver does not cancel then the activity diagram concludes.
+
+    Where decisions are made represents the alternative paths available, a driver canceling a ride, a rider sharing a booking and whether or not the rider has 
+    notifications allowed on their device are all alternate paths to the main happy path. 
+
+    \newpage
+    \subsection{Sequence Diagram}
+
+    In addition to an activity diagram, I have also created a sequence diagram modeling the 'Confirm Ride Completion' use case for the rider actor.
+    This use case happens once a driver has completed a ride and dropped a rider off at their selected drop off point. For this reason the diagram only models
+    what happens after all a ride has finished. Signing up to the app, accepting a ride and any events that happen during the ride are not modeled.
+    \begin{figure}[H]
+      \centering
+      \captionsetup{justification=centering}
+      \includegraphics[width=12cm]{assets/sequence.drawio.png}
+      \caption{Figure showing sequence diagram for Driver confirming ride completion.}
+      \label{fig:sequenceDiagram}
+    \end{figure}
+
+    The driver uses the \textbf{Driver App} to confirm that a ride has completed. This interaction sends a request to the \textbf{App Controller} object which then
+    updates the ride in \textbf{Database}. I chose do it this way as it's not a good idea to allow users of the app to have direct access to functions accessing
+    database resources. The Database can throw an exception at this point if it is given a invalid ride to change. This results in the App Controller displaying
+    an error message to the user. If a valid is given however the Database confirms the change with the App Controller and the driver is navigated back to the 
+    home screen. 
+
+    In the background, with no additional input from the driver, the App Controller requests a notification to be built from the \textbf{Notification Builder} control object.
+    This object calculates the notification message, builds a \textbf{Notification} object and then sends that Notification to the \textbf{Rider App}.
+    I have included Notification as a separate object as there will be many different types of notifications, so this represents a base class which Notification Builder
+    can tailor specific notifications.
+
+    Unlike in previous diagrams, here I am assuming the Rider App device is accepting notifications, otherwise there would be an exception here as the 
+    notification would never reach the Rider App.
+
+    \newpage
+    \section{Enterprise Architecture using Archimate}
+    For documenting the enterprise architecture of Uber I have decided to use Archimate which:
+    \begin{quote}
+      \textit{'defines a common language for describing the purpose, construction, and operation of the organization.'} [4]
+    \end{quote}
+    I have split this next section up into first modeling the business level, then the application level. For ease I have separated these levels into
+    individual figures, however the fully connected diagram can be seen in the figure in \hyperref[sec:AppendixB]{\textbf{Appendix B}}
+
+    \subsection{Business Level}
+    I decided to model the registration process for both riders and drivers, as this is a feature/functionality I haven't discussed much yet in this report.
+    Starting with the business layer, this assumes that the user already has installed/downloaded the app to their device.
+    \begin{figure}[H]
+      \centering
+      \captionsetup{justification=centering}
+      \includegraphics[width=12cm]{assets/arch_bus.drawio.png}
+      \caption{Figure showing archimate diagram showing business layer for registration process.}
+      \label{fig:archimateBusLayer}
+    \end{figure}
+
+    \newpage
+    As this is for both rider and driver actors they are assigned the role of \textbf{Customer} which uses the \textbf{Registration Service}
+    realised by the \textbf{Registration Function}. This is used to fire the \textbf{Register} event which starts the Registration Function.
+    First Uber will take the customers specified account details and then validate them, then it will attempt to validate the customers banking details.
+    This is done by the \textbf{Finance Department} using their Bank Check Function which checks if the given details are blacklisted, using the Blacklist data object
+    as well as manually checking the users credit history.
+
+    If this fails the customer is sent a notified of registration failure. Otherwise the flow continues and checks whether or not this is a
+    rider or driver attempting to sign up. If it's a driver background checks are done by the \textbf{HR Department} through the \textbf{Background Checker Service}.
+    If this fails the user is notified again of registration failure and then added to the blacklist. I do modeled it this way as I am assuming
+    Uber will not want anyone who has failed the background checks to ever be a driver for them.
+
+    If the driver passes the background check it rejoins the same path as the rider, finishing up the function by saving the new user details and
+    sending the user confirmation of their successful sign up.
+
+    \newpage
+    \subsection{Application Level}
+    For the application level I took functions/processes from the business level and thought whether or not they would need to be 
+    programmed into the system, instead of being done by an individual. From this analysis:
+
+    \begin{itemize}
+      \item Four services were modelled Email Service, Notification Service, Blacklist Service and Registration Service.
+      \item Interfaces were modeled for these services with a 1-to-1 relationship, e.g. Blacklist Service used a Blacklist Interface.
+            the only exception to this was the Notification Service which had two interfaces. This was due to the different types of
+            notifications that the function was capable of producing.
+      \item Two components were modeled, a Notification Component and a Registration Handler Component.
+    \end{itemize}
+
+    \textbf{Notification Component} - The Notification Component implements all interfaces provided by the Email Service and
+    Notification Service. I grouped these together as the email service in this case is simply sending a success email, which
+    is very similar to a push notification.
+
+    The component is assigned two functions, Send success email, which is realised by the Email Service and Send Notification,
+    which is realised by the Notification Service and uses the Notification data object.
+
+    \vspace{0.1cm}
+    \textbf{Registration Handler Component} - The Registration Handler Component implements all interfaces provided by the Blacklist
+    Service and Registration Service. Similar to the Notification Component I have grouped these services as blacklisting is
+    part of the sign up process and triggers on attempted validation of a users registration details.
+
+    The Registration Handler Component is assigned three functions. The Add details to blacklist table uses the blacklist record data object,
+    and is realised by the Blacklist Service. The Registration service realises two functions, the first being 
+    Validate registration details which also uses the Blacklist record object. The second is Save new user to 
+    user table which uses the User record data object.
+
+    \begin{figure}[H]
+      \centering
+      \captionsetup{justification=centering}
+      \includegraphics[width=12cm]{assets/arch_app.drawio.png}
+      \caption{Figure showing archimate diagram showing application layer for registration process.}
+      \label{fig:archimateAppLayer}
+    \end{figure}
+
+    \newpage
+
+    \section{Implementing Self Driving Vehicles (Roadmap)}
+    In my opinion a great long term goal for Uber is to implement self driving 'taxis' into the Uber eco-system. Tesla is the current leader
+    in the self driving car, or CAV (Connected and Autonomous Vehicles), industry so will be the company/system that I suggest to 
+    integrate with. A few reasons why I think Tesla is the best option:
+
+    \begin{itemize}
+      \item As previously stated Tesla is currently the leader in this field.
+      \item Uber already offers a service where users can rent a Tesla and gain benefits from doing so. [1]
+      \item The above offer was due to a deal between Tesla and Hertz, so the company is clearly willing to negotiate deals with external companies.
+      \item With Uber having the largest market share, (72\%) over Lyfts' (28\%) [2], in the ride sharing sector, it positions them well to get better and more profitable deals.
+    \end{itemize}
+
+    The implementation of a fully automated, self driving fleet of vehicles would mean that \textbf{riders} would end up 
+    with a more consistent/reliable service. This would result in a more loyal customer base, which in turn would result in
+    more riders/rides and more profit. In addition to this, Uber would no longer have to take a cut of the drivers fare, they
+    can take the whole fare for themselves as they would own the vehicles. Another profitability factor is the fact that there
+    would be no need to continue support for the old driver app. This would mean money and time could be saved as:
+
+    \begin{enumerate}
+      \item Developers wouldn't have to work on the old driver app anymore, so development could go into new projects.
+      \item Old infrastructure, such as cloud or on premise servers, could be retired.
+      \item As previously mentioned Uber would receive the whole trip as payment, not just a cut.
+      \item Departments such as Customer Service could be cut down and have less issues to deal with, due to the total user base shrinking as drivers would no longer be a customer.
+    \end{enumerate} 
+
+    \newpage
+    \subsection{Motivation and Strategy Diagram}
+
+    \noindent  With Ubers already talented development team and their ability to hire new talent, due to their notoriety, I assume Uber has 
+    the technical skills to implement and make changes to their current infrastructure quickly. Below is an archimate strategy to demonstrate some of
+    the points raised above. 
+
+    \begin{figure}[H]
+      \centering
+      \captionsetup{justification=centering}
+      \includegraphics[width=12cm]{assets/strategy.drawio.png}
+      \caption{Figure showing archimate strategy diagram for implementation of self driving fleet.}
+      \label{fig:strategyDiagram}
+    \end{figure}
+
+    \newpage
+
+    \noindent Alongside the above strategy diagram I have also created a motivation diagram, again using archimate. This shares some of the same sentiment 
+    as the strategy diagram, however also dives more into customer satisfaction and the negative impact that can have on Uber.
+
+    \begin{figure}[H]
+      \centering
+      \captionsetup{justification=centering}
+      \includegraphics[width=12cm]{assets/motivation.drawio.png}
+      \caption{Figure showing motivation diagram showing current assessments and drivers of system.}
+      \label{fig:motivationsDiagram}
+    \end{figure}
+
+    \newpage
+
+    \begin{landscape}
+      \noindent Finally I have created implementation/migration diagram to show the stages of development for the suggested self driving fleet. This diagram is shown
+      below and I will discuss it more on the next page.
+
+      \vspace{0.5cm}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=20cm]{assets/migration.drawio.png}
+        \caption{Figure showing archimate implementation/migration diagram.}
+        \label{fig:migrationDiagram}
+      \end{figure}
+    \end{landscape}
+
+    \newpage
+
+    \section{Conclusion}
+
+    \newpage
+    \section{References}
+    \noindent [1] Uber. (2022) \textit{The History of Uber - Uber's Timeline | Uber Newsroom}. Available at https://www.uber.com/en-GB/newsroom/history/ (accessed on 30th May 2022)
+    \vspace{0.2cm}
+
+    \noindent [2] Uber. (2022) \textit{About us | Uber}. Available at https://www.uber.com/gb/en/about/ (accessed on 30th May 2022)
+    \vspace{0.2cm}
+
+    \noindent [3] Stripe Inc. (2022) \textit{Online payment processing for internet businesses - Stripe}. Available at https://stripe.com/gb (accessed on 31st May 2022)
+    \vspace{0.2cm}
+
+    \noindent [4] The Open Group. (2022) \textit{ArchiMate® Specification | The Open Group Website}. Available at https://www.opengroup.org/archimate-home (accessed on 31st May 2022)
+
+    \noindent [1] Uber. (2022) \textit{Rent a Tesla \& Drive with Uber | Uber}. Available at \url{https://www.uber.com/us/en/drive/vehicle-solutions/hertz/tesla/} (accessed on 27th May 2022).
+    \vspace{0.2cm}
+
+    \noindent [2] Perry, J. (2022) \textit{The U.S. Rideshare Industry: Uber vs. Lyft - Bloomberg Second Measure}. Available at \url{https://secondmeasure.com/datapoints/rideshare-industry-overview/} (accessed on 27th May 2022).
+    \vspace{0.2cm}
+    \newpage
+
+    \section{Appendix}
+    \label{sec:AppendixA}
+    \subsection{Appendix A : Full Use Case Diagram}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{assets/use_cases.drawio.png}
+        \caption{Figure showing full Use Case Diagram}
+        \label{fig:fullUseCase}
+      \end{figure}
+    
+    \newpage
+    \subsection{Appendix B : Full Archimate Registration Diagram}
+    \label{sec:AppendixB}
+      \begin{figure}[H]
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=12cm]{assets/arch_full.drawio.png}
+        \caption{Figure showing archimate diagram showing process for registering an account.}
+        \label{fig:archimateProcessFull}
+      \end{figure}
+
+    \newpage
+    \subsection{Appendix C : Sequence Diagram with Access}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=12cm]{assets/sequence_access.drawio.png}
+        \caption{Figure showing sequence diagram showing access of objects.}
+        \label{fig:sequenceWithSections}
+      \end{figure}
+\end{document}
