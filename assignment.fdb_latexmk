@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1654078199 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1654078201
-  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1654078198 34285 66c01b9a2e93378080520579404acf01 ""
+["pdflatex"] 1654078416 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1654078418
+  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1654078416 34322 92e9c806f477b3a5f9ab34f185302876 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -106,10 +106,10 @@
   "assets/uber_logo.png" 1653307176 51510 63331ad2a0cc6470de98c6d52b8ecd82 ""
   "assets/use_cases.drawio.png" 1653984360 182837 afcf0afe3f761c8215e9aaecc67a0c94 ""
   "assets/viewpoints.drawio.png" 1653384970 63109 40bf63a57d89a601c56687def22d31e6 ""
-  "assignment.aux" 1654078201 8515 d2344f50a26f5f56e55dcadad5d50117 "pdflatex"
-  "assignment.out" 1654078201 3546 e47fd5de1167d86be28c42458ced34c7 "pdflatex"
-  "assignment.tex" 1654078198 34285 66c01b9a2e93378080520579404acf01 ""
-  "assignment.toc" 1654078201 1808 119ace1f7cd5d14e6b579c6de7edfd63 "pdflatex"
+  "assignment.aux" 1654078418 8515 d2344f50a26f5f56e55dcadad5d50117 "pdflatex"
+  "assignment.out" 1654078418 3546 e47fd5de1167d86be28c42458ced34c7 "pdflatex"
+  "assignment.tex" 1654078416 34322 92e9c806f477b3a5f9ab34f185302876 ""
+  "assignment.toc" 1654078418 1808 119ace1f7cd5d14e6b579c6de7edfd63 "pdflatex"
   (generated)
   "assignment.aux"
   "assignment.log"

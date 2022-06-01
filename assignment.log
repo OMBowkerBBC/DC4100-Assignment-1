@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.23)  1 JUN 2022 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.23)  1 JUN 2022 11:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -319,87 +319,87 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `assignment.toc'.
 
  [2] [3]
-<assets/viewpoints.drawio.png, id=136, 1417.295pt x 528.97626pt>
+<assets/viewpoints.drawio.png, id=135, 1417.295pt x 528.97626pt>
 File: assets/viewpoints.drawio.png Graphic file (type png)
 <use assets/viewpoints.drawio.png>
-Package pdftex.def Info: assets/viewpoints.drawio.png  used on input line 51.
+Package pdftex.def Info: assets/viewpoints.drawio.png  used on input line 53.
 (pdftex.def)             Requested size: 341.43306pt x 127.4331pt.
  [4 <./assets/viewpoints.drawio.png>]
-<assets/customer_use_case.drawio.png, id=144, 744.7825pt x 844.15375pt>
+<assets/customer_use_case.drawio.png, id=143, 744.7825pt x 844.15375pt>
 File: assets/customer_use_case.drawio.png Graphic file (type png)
 <use assets/customer_use_case.drawio.png>
-Package pdftex.def Info: assets/customer_use_case.drawio.png  used on input line 68.
+Package pdftex.def Info: assets/customer_use_case.drawio.png  used on input line 70.
 (pdftex.def)             Requested size: 172.5pt x 195.51663pt.
  [5 <./assets/customer_use_case.drawio.png>]
-<assets/pp_use_case.drawio.png, id=151, 489.83pt x 251.94125pt>
+<assets/pp_use_case.drawio.png, id=150, 489.83pt x 251.94125pt>
 File: assets/pp_use_case.drawio.png Graphic file (type png)
 <use assets/pp_use_case.drawio.png>
-Package pdftex.def Info: assets/pp_use_case.drawio.png  used on input line 90.
+Package pdftex.def Info: assets/pp_use_case.drawio.png  used on input line 92.
 (pdftex.def)             Requested size: 142.26378pt x 73.17256pt.
-<assets/csr_use_case.drawio.png, id=153, 507.8975pt x 97.36375pt>
+<assets/csr_use_case.drawio.png, id=152, 507.8975pt x 97.36375pt>
 File: assets/csr_use_case.drawio.png Graphic file (type png)
 <use assets/csr_use_case.drawio.png>
-Package pdftex.def Info: assets/csr_use_case.drawio.png  used on input line 102.
+Package pdftex.def Info: assets/csr_use_case.drawio.png  used on input line 104.
 (pdftex.def)             Requested size: 142.26378pt x 27.27205pt.
-<assets/authorities_use_case.drawio.png, id=154, 293.095pt x 92.345pt>
+<assets/authorities_use_case.drawio.png, id=153, 293.095pt x 92.345pt>
 File: assets/authorities_use_case.drawio.png Graphic file (type png)
 <use assets/authorities_use_case.drawio.png>
-Package pdftex.def Info: assets/authorities_use_case.drawio.png  used on input line 112.
+Package pdftex.def Info: assets/authorities_use_case.drawio.png  used on input line 114.
 (pdftex.def)             Requested size: 142.26378pt x 44.82248pt.
 
-Overfull \hbox (65.33858pt too wide) in paragraph at lines 118--170
+Overfull \hbox (65.33858pt too wide) in paragraph at lines 120--172
  [] 
  []
 
 [6 <./assets/pp_use_case.drawio.png> <./assets/csr_use_case.drawio.png> <./assets/authorities_use_case.drawio.png>] [7] [8] [9]
-<assets/activity_diagram.drawio.png, id=228, 1104.125pt x 1260.71pt>
+<assets/activity_diagram.drawio.png, id=227, 1104.125pt x 1260.71pt>
 File: assets/activity_diagram.drawio.png Graphic file (type png)
 <use assets/activity_diagram.drawio.png>
-Package pdftex.def Info: assets/activity_diagram.drawio.png  used on input line 263.
+Package pdftex.def Info: assets/activity_diagram.drawio.png  used on input line 265.
 (pdftex.def)             Requested size: 327.20668pt x 373.61832pt.
  [10 <./assets/activity_diagram.drawio.png>] [11]
-<assets/sequence.drawio.png, id=239, 894.34125pt x 432.61626pt>
+<assets/sequence.drawio.png, id=238, 894.34125pt x 432.61626pt>
 File: assets/sequence.drawio.png Graphic file (type png)
 <use assets/sequence.drawio.png>
-Package pdftex.def Info: assets/sequence.drawio.png  used on input line 293.
+Package pdftex.def Info: assets/sequence.drawio.png  used on input line 295.
 (pdftex.def)             Requested size: 341.43306pt x 165.16162pt.
  [12 <./assets/sequence.drawio.png>]
-<assets/arch_bus.drawio.png, id=247, 1506.62875pt x 1206.5075pt>
+<assets/arch_bus.drawio.png, id=246, 1506.62875pt x 1206.5075pt>
 File: assets/arch_bus.drawio.png Graphic file (type png)
 <use assets/arch_bus.drawio.png>
-Package pdftex.def Info: assets/arch_bus.drawio.png  used on input line 327.
+Package pdftex.def Info: assets/arch_bus.drawio.png  used on input line 329.
 (pdftex.def)             Requested size: 341.43306pt x 273.40392pt.
  [13 <./assets/arch_bus.drawio.png>] [14]
-<assets/arch_app.drawio.png, id=259, 1485.55pt x 455.7025pt>
+<assets/arch_app.drawio.png, id=258, 1485.55pt x 455.7025pt>
 File: assets/arch_app.drawio.png Graphic file (type png)
 <use assets/arch_app.drawio.png>
-Package pdftex.def Info: assets/arch_app.drawio.png  used on input line 380.
+Package pdftex.def Info: assets/arch_app.drawio.png  used on input line 382.
 (pdftex.def)             Requested size: 341.43306pt x 104.73288pt.
  [15 <./assets/arch_app.drawio.png>]
-Overfull \hbox (8.28128pt too wide) in paragraph at lines 387--387
+Overfull \hbox (8.28128pt too wide) in paragraph at lines 389--389
 []\OT1/cmr/bx/n/14.4 Implementing Self Driv-ing Ve-hi-cles (Roadmap) 
  []
 
 [16]
-<assets/strategy.drawio.png, id=274, 824.07875pt x 773.89125pt>
+<assets/strategy.drawio.png, id=273, 824.07875pt x 773.89125pt>
 File: assets/strategy.drawio.png Graphic file (type png)
 <use assets/strategy.drawio.png>
-Package pdftex.def Info: assets/strategy.drawio.png  used on input line 422.
+Package pdftex.def Info: assets/strategy.drawio.png  used on input line 424.
 (pdftex.def)             Requested size: 341.43306pt x 320.6393pt.
  [17 <./assets/strategy.drawio.png>]
-<assets/motivation.drawio.png, id=282, 924.45375pt x 663.47874pt>
+<assets/motivation.drawio.png, id=281, 924.45375pt x 663.47874pt>
 File: assets/motivation.drawio.png Graphic file (type png)
 <use assets/motivation.drawio.png>
-Package pdftex.def Info: assets/motivation.drawio.png  used on input line 435.
+Package pdftex.def Info: assets/motivation.drawio.png  used on input line 437.
 (pdftex.def)             Requested size: 341.43306pt x 245.04796pt.
  [18 <./assets/motivation.drawio.png>]
-<assets/migration.drawio.png, id=289, 1534.73375pt x 461.725pt>
+<assets/migration.drawio.png, id=288, 1534.73375pt x 461.725pt>
 File: assets/migration.drawio.png Graphic file (type png)
 <use assets/migration.drawio.png>
-Package pdftex.def Info: assets/migration.drawio.png  used on input line 449.
+Package pdftex.def Info: assets/migration.drawio.png  used on input line 451.
 (pdftex.def)             Requested size: 569.05511pt x 171.20193pt.
 
-Overfull \hbox (19.05511pt too wide) in paragraph at lines 449--450
+Overfull \hbox (19.05511pt too wide) in paragraph at lines 451--452
  [][] 
  []
 
@@ -408,37 +408,37 @@ Overfull \hbox (19.05511pt too wide) in paragraph at lines 449--450
  <./assets/migration.drawio.png>] [20
 
 ]
-Overfull \hbox (8.07014pt too wide) in paragraph at lines 461--463
+Overfull \hbox (8.07014pt too wide) in paragraph at lines 463--465
 \OT1/cmr/m/n/10 Avail-able at https://www.uber.com/en-GB/newsroom/history/ (ac-cessed on 30th
  []
 
 
-Overfull \hbox (25.73166pt too wide) in paragraph at lines 464--466
+Overfull \hbox (25.73166pt too wide) in paragraph at lines 466--468
 \OT1/cmr/m/n/10 [2] Uber. (2022) \OT1/cmr/m/it/10 About us | Uber\OT1/cmr/m/n/10 . Avail-able at https://www.uber.com/gb/en/about/
  []
 
 
-Overfull \hbox (112.3153pt too wide) in paragraph at lines 475--477
+Overfull \hbox (112.3153pt too wide) in paragraph at lines 477--479
 \OT1/cmr/m/it/10 ond Mea-sure\OT1/cmr/m/n/10 . Avail-able at []$\OT1/cmtt/m/n/10 https : / / secondmeasure . com / datapoints / rideshare-[]industry-[]overview/$[]
  []
 
 [21]
-<assets/use_cases.drawio.png, id=310, 1173.38374pt x 844.15375pt>
+<assets/use_cases.drawio.png, id=309, 1173.38374pt x 844.15375pt>
 File: assets/use_cases.drawio.png Graphic file (type png)
 <use assets/use_cases.drawio.png>
-Package pdftex.def Info: assets/use_cases.drawio.png  used on input line 484.
+Package pdftex.def Info: assets/use_cases.drawio.png  used on input line 486.
 (pdftex.def)             Requested size: 284.52756pt x 204.68771pt.
  [22 <./assets/use_cases.drawio.png>]
-<assets/arch_full.drawio.png, id=317, 1921.1775pt x 1692.3225pt>
+<assets/arch_full.drawio.png, id=316, 1921.1775pt x 1692.3225pt>
 File: assets/arch_full.drawio.png Graphic file (type png)
 <use assets/arch_full.drawio.png>
-Package pdftex.def Info: assets/arch_full.drawio.png  used on input line 495.
+Package pdftex.def Info: assets/arch_full.drawio.png  used on input line 497.
 (pdftex.def)             Requested size: 341.43306pt x 300.75732pt.
  [23 <./assets/arch_full.drawio.png>]
-<assets/sequence_access.drawio.png, id=324, 1045.9075pt x 432.61626pt>
+<assets/sequence_access.drawio.png, id=323, 1045.9075pt x 432.61626pt>
 File: assets/sequence_access.drawio.png Graphic file (type png)
 <use assets/sequence_access.drawio.png>
-Package pdftex.def Info: assets/sequence_access.drawio.png  used on input line 504.
+Package pdftex.def Info: assets/sequence_access.drawio.png  used on input line 506.
 (pdftex.def)             Requested size: 341.43306pt x 141.22572pt.
  [24 <./assets/sequence_access.drawio.png>] (./assignment.aux)
 Package rerunfilecheck Info: File `assignment.out' has not changed.
@@ -453,10 +453,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  69i,9n,117p,2254b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on assignment.pdf (24 pages, 1152329 bytes).
+Output written on assignment.pdf (24 pages, 1152318 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
+ 397 PDF objects out of 1000 (max. 8388607)
+ 317 compressed objects within 4 object streams
  114 named destinations out of 1000 (max. 500000)
  249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
