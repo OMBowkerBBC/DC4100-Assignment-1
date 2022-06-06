@@ -6,8 +6,9 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{hyperref}
-\usepackage{pdflscape}
 \usepackage{caption}
+\usepackage{rotating}
+\usepackage{pdflscape}
 
 \title{UBER Analysis and Self Driving Implementation (DC4100)}
 \author{Oliver Matthew Bowker (220263618)}
@@ -393,9 +394,9 @@
 
     \begin{itemize}
       \item As previously stated Tesla is currently the leader in this field.
-      \item Uber already offers a service where users can rent a Tesla and gain benefits from doing so. [1]
+      \item Uber already offers a service where users can rent a Tesla and gain benefits from doing so. [5]
       \item The above offer was due to a deal between Tesla and Hertz, so the company is clearly willing to negotiate deals with external companies.
-      \item With Uber having the largest market share, (72\%) over Lyfts' (28\%) [2], in the ride sharing sector, it positions them well to get better and more profitable deals.
+      \item With Uber having the largest market share, (72\%) over Lyfts' (28\%) [6], in the ride sharing sector, it positions them well to get better and more profitable deals.
     \end{itemize}
 
     The implementation of a fully automated, self driving fleet of vehicles would mean that \textbf{riders} would end up 
@@ -410,6 +411,13 @@
       \item As previously mentioned Uber would receive the whole trip as payment, not just a cut.
       \item Departments such as Customer Service could be cut down and have less issues to deal with, due to the total user base shrinking as drivers would no longer be a customer.
     \end{enumerate} 
+
+    Before I go into the created diagrams the biggest hurdle currently is regulation. However this seems to be going in the right direction, with this quote from the UK government website:
+    \begin{quote}
+      \textit{'Automated Lane Keeping System technology outcome means self-driving vehicles could be used on British roads.'} [7]
+    \end{quote}
+    This technology is just the start as Tesla, and other self driving technologies, use machine learning which allows \textit{'computer programs to recognize patterns and solve common problems'} [8].
+    This kind of technology learns and grows over time, therefore with this roadmap being a plan to a long term goal, regulation and software improvements are almost guaranteed.
 
     \newpage
     \subsection{Motivation and Strategy Diagram}
@@ -441,12 +449,37 @@
 
     \newpage
 
-    \begin{landscape}
-      \noindent Finally I have created implementation/migration diagram to show the stages of development for the suggested self driving fleet. This diagram is shown
-      below and I will discuss it more on the next page.
+    \subsection{Implementation/Migration Diagram}
+    Finally I have created a implementation and migration for the idea of a implementing a self driving fleet for Uber.
+    I've broke down the implementation/migration to the new goal into 7 plateaus/stages, the full diagram can be seen on the next page.
 
-      \vspace{0.5cm}
-      \begin{figure}[H]
+    \begin{enumerate}
+      \item \textbf{Baseline} - This is Ubers' start point and current architecture.
+      \item \textbf{Initial Investigation Complete} - Starting at the baseline Uber currently have no knowledge of the current regulatory landscape or the
+      likelihood that this will change within the next 10 years. To fill this gap the work package \textit{Legal and Regulation Investigation}
+      will be completed and output an \textit{Investigation Report}.
+      \item \textbf{Strategic Plan Complete} - Once Uber have more knowledge on the legality, they can then start planning on how
+            they are going to implement it into their own system. The outputs for the work package \textit{Architecture and Planning}
+            output a lot of business/enterprise documentation that can be used in the application development that follows.
+      \item \textbf{Application Design Complete} - Similar to the strategic plan, Uber will also need a design for developers to build from. This stage/plateau
+            will output \textit{Technical Design Documentation}. I am assuming these designs will include, visual designs, documentation such as use case diagrams,
+            class diagrams, sequence diagrams, activity diagrams and other helpful documentation to help share how the system will function.
+      \item \textbf{Trial Rollout} - Before the trial rollout plateau is achieved Uber will have a lot of documentation, but no application changes. For this reason 
+            gap between \textbf{Application Design Complete} and \textbf{Trial Rollout} is \textit{Having a product to test}. The work package for this plateau outputs
+            a \textit{MVP Service} which will allow Uber to trial the system on an extremely small section of the its customer base.
+      \item \textbf{Beta Rollout} - The gap between \textbf{Trial Rollout} and \textbf{Beta Rollout} is gaining consumer confidence In
+            the new system. Looking on line will show you all sorts of crashes from automated vehicles [9]. For that reason the work package for the Beta Rollout
+            plateau is large and has multiple outputs. The upgraded Beta Service is obvious, the software will be improved using User Feedback. However at this 
+            stage I also felt like it was important to start sharing some safety statistics to gain the customers confidence that this new system is as safe, if 
+            not even safer, than the previous driver system.
+      \item \textbf{Full Automated Fleet in Place} - The final stage is when the \textit{Full Version Release} is complete. This stage will render the driver app
+            unneeded and therefore be closed down. Uber will now be fully reliant on its self driving fleet to take riders to their destination.
+    \end{enumerate}
+
+    \newpage
+
+    \begin{landscape}
+      \begin{figure}
         \centering
         \includegraphics[width=20cm]{assets/migration.drawio.png}
         \caption{Figure showing archimate implementation/migration diagram.}
@@ -455,27 +488,33 @@
     \end{landscape}
 
     \newpage
-
-    \section{Conclusion}
-
-    \newpage
     \section{References}
-    \noindent [1] Uber. (2022) \textit{The History of Uber - Uber's Timeline | Uber Newsroom}. Available at https://www.uber.com/en-GB/newsroom/history/ (accessed on 30th May 2022)
+    \noindent [1] Uber. (2022) \textit{The History of Uber - Uber's Timeline | Uber Newsroom}. Available at \url{https://www.uber.com/en-GB/newsroom/history/} (accessed on 30th May 2022).
     \vspace{0.2cm}
 
-    \noindent [2] Uber. (2022) \textit{About us | Uber}. Available at https://www.uber.com/gb/en/about/ (accessed on 30th May 2022)
+    \noindent [2] Uber. (2022) \textit{About us | Uber}. Available at \url{https://www.uber.com/gb/en/about/} (accessed on 30th May 2022).
     \vspace{0.2cm}
 
-    \noindent [3] Stripe Inc. (2022) \textit{Online payment processing for internet businesses - Stripe}. Available at https://stripe.com/gb (accessed on 31st May 2022)
+    \noindent [3] Stripe Inc. (2022) \textit{Online payment processing for internet businesses - Stripe}. Available at \url{https://stripe.com/gb} (accessed on 31st May 2022).
     \vspace{0.2cm}
 
-    \noindent [4] The Open Group. (2022) \textit{ArchiMate® Specification | The Open Group Website}. Available at https://www.opengroup.org/archimate-home (accessed on 31st May 2022)
-
-    \noindent [1] Uber. (2022) \textit{Rent a Tesla \& Drive with Uber | Uber}. Available at \url{https://www.uber.com/us/en/drive/vehicle-solutions/hertz/tesla/} (accessed on 27th May 2022).
+    \noindent [4] The Open Group. (2022) \textit{ArchiMate® Specification | The Open Group Website}. Available at \url{https://www.opengroup.org/archimate-home} (accessed on 31st May 2022).
     \vspace{0.2cm}
 
-    \noindent [2] Perry, J. (2022) \textit{The U.S. Rideshare Industry: Uber vs. Lyft - Bloomberg Second Measure}. Available at \url{https://secondmeasure.com/datapoints/rideshare-industry-overview/} (accessed on 27th May 2022).
+    \noindent [5] Uber. (2022) \textit{Rent a Tesla \& Drive with Uber | Uber}. Available at \url{https://www.uber.com/us/en/drive/vehicle-solutions/hertz/tesla/} (accessed on 27th May 2022).
     \vspace{0.2cm}
+
+    \noindent [6] Perry, J. (2022) \textit{The U.S. Rideshare Industry: Uber vs. Lyft - Bloomberg Second Measure}. Available at \url{https://secondmeasure.com/datapoints/rideshare-industry-overview/} (accessed on 27th May 2022).
+    \vspace{0.2cm}
+
+    \noindent [7] Gov.UK. (2021) \textit{Government paves the way for self-driving vehicles on UK roads - GOV.UK}. Available at \url{https://www.gov.uk/government/news/government-paves-the-way-for-self-driving-vehicles-on-uk-roads} (accessed on 6th June 2022). 
+    \vspace{0.2cm}
+
+    \noindent [8] IBM Cloud Education. (2020) \textit{What are Neural Networks?  | IBM}. Available at \url{https://www.ibm.com/cloud/learn/neural-networks} (accessed on  6th June 2022).
+
+    \noindent [9] BBC. (2019) \textit{Tesla Autopilot design 'led to' crash - BBC News}. Available at \url{https://www.bbc.co.uk/news/technology-49594260} (accessed on 1st June 2022).
+    \vspace{0.2cm}
+
     \newpage
 
     \section{Appendix}

@@ -12,10 +12,10 @@
 \contentsline {subsection}{\numberline {4.1}Business Level}{13}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Application Level}{15}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Implementing Self Driving Vehicles (Roadmap)}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Motivation and Strategy Diagram}{17}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Conclusion}{20}{section.6}%
-\contentsline {section}{\numberline {7}References}{21}{section.7}%
-\contentsline {section}{\numberline {8}Appendix}{22}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Appendix A : Full Use Case Diagram}{22}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Appendix B : Full Archimate Registration Diagram}{23}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Appendix C : Sequence Diagram with Access}{24}{subsection.8.3}%
+\contentsline {subsection}{\numberline {5.1}Motivation and Strategy Diagram}{18}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Implementation/Migration Diagram}{20}{subsection.5.2}%
+\contentsline {section}{\numberline {6}References}{22}{section.6}%
+\contentsline {section}{\numberline {7}Appendix}{23}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Appendix A : Full Use Case Diagram}{23}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Appendix B : Full Archimate Registration Diagram}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Appendix C : Sequence Diagram with Access}{25}{subsection.7.3}%

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1654078416 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1654078418
-  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1654078416 34322 92e9c806f477b3a5f9ab34f185302876 ""
+["pdflatex"] 1654503301 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1654503303
+  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1654503298 38634 f256625a41972cc35d5ef616517e6912 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -54,6 +54,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls" 1636758526 20144 8a7de377ae7a11ee924a7499611f5a9d ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1636758526 3034 3bfb87122e6fa8758225c0dd3cbaceba ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1636758526 2462 754d6b31b2ab5a09bb72c348ace2ec75 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty" 1622581934 5157 f308c7c04889e16c588e78aa42599fae ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo" 1636758526 8448 96f18c76bf608a36ee6fbf021ac1dd32 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty" 1647548653 54291 b8e5c600d4aa37b48a740dd2a6c26163 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty" 1647548653 71241 d2cd3a1c5acef9cb31f945b93c0bb6e3 ""
@@ -67,6 +68,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty" 1636758526 7996 a8fb260d598dcaf305a7ae7b9c3e3229 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty" 1622581934 2671 4de6781a30211fe0ea4c672e4a2a8166 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/lscape.sty" 1622581934 1808 e22d55a4f66156801447813626bd4159 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/rotating.sty" 1622581934 7060 456d34a7dddb810e7885ac5d0fc74391 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty" 1636758526 4009 187ea2dc3194cd5a76cd99a8d7a6c4d0 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty" 1580250785 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def" 1645564115 49029 7c9e5115b2217efbeb7828ac0d1bf1a0 ""
@@ -106,10 +108,10 @@
   "assets/uber_logo.png" 1653307176 51510 63331ad2a0cc6470de98c6d52b8ecd82 ""
   "assets/use_cases.drawio.png" 1653984360 182837 afcf0afe3f761c8215e9aaecc67a0c94 ""
   "assets/viewpoints.drawio.png" 1653384970 63109 40bf63a57d89a601c56687def22d31e6 ""
-  "assignment.aux" 1654078418 8515 d2344f50a26f5f56e55dcadad5d50117 "pdflatex"
-  "assignment.out" 1654078418 3546 e47fd5de1167d86be28c42458ced34c7 "pdflatex"
-  "assignment.tex" 1654078416 34322 92e9c806f477b3a5f9ab34f185302876 ""
-  "assignment.toc" 1654078418 1808 119ace1f7cd5d14e6b579c6de7edfd63 "pdflatex"
+  "assignment.aux" 1654503303 8547 f56447bf701641b31ac9bfc6f6901214 "pdflatex"
+  "assignment.out" 1654503303 3673 fee0d6970cc2d8412cc9418605f6c6fa "pdflatex"
+  "assignment.tex" 1654503298 38634 f256625a41972cc35d5ef616517e6912 ""
+  "assignment.toc" 1654503303 1840 886c0c1394b1eea67923cd9d63419972 "pdflatex"
   (generated)
   "assignment.aux"
   "assignment.log"
