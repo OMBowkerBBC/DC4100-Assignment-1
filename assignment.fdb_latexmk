@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1654503301 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1654503303
-  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1654503298 38634 f256625a41972cc35d5ef616517e6912 ""
+["pdflatex"] 1655101422 "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" "assignment.pdf" "assignment" 1655101425
+  "/Users/bowkeo01/Documents/Uni/DC4100 Technology Management/Assignment 1/assignment.tex" 1655101422 41184 ac327a6c425446b228b5fe3f86c53dd9 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -107,11 +107,11 @@
   "assets/strategy.drawio.png" 1654076183 80805 ff3f529867a698fed0ee652ba854398e ""
   "assets/uber_logo.png" 1653307176 51510 63331ad2a0cc6470de98c6d52b8ecd82 ""
   "assets/use_cases.drawio.png" 1653984360 182837 afcf0afe3f761c8215e9aaecc67a0c94 ""
-  "assets/viewpoints.drawio.png" 1653384970 63109 40bf63a57d89a601c56687def22d31e6 ""
-  "assignment.aux" 1654503303 8547 f56447bf701641b31ac9bfc6f6901214 "pdflatex"
-  "assignment.out" 1654503303 3673 fee0d6970cc2d8412cc9418605f6c6fa "pdflatex"
-  "assignment.tex" 1654503298 38634 f256625a41972cc35d5ef616517e6912 ""
-  "assignment.toc" 1654503303 1840 886c0c1394b1eea67923cd9d63419972 "pdflatex"
+  "assets/viewpoints.drawio.png" 1655100003 56723 348385f8d5419e971062beb4e9f27dd1 ""
+  "assignment.aux" 1655101425 8547 fb0dc1c53fbb0dc46c79e8e4f1ba1425 "pdflatex"
+  "assignment.out" 1655101425 3673 fee0d6970cc2d8412cc9418605f6c6fa "pdflatex"
+  "assignment.tex" 1655101422 41184 ac327a6c425446b228b5fe3f86c53dd9 ""
+  "assignment.toc" 1655101425 1840 3520dbfba2aac2d3bbd2af5386ab4706 "pdflatex"
   (generated)
   "assignment.aux"
   "assignment.log"

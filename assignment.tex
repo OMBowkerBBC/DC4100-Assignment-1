@@ -43,12 +43,22 @@
     \newpage
   
     \section{Requirements and Use Cases}
-    In this section of the report I will create a use case diagram containing the relevant actors of th system and break down why they are there. After I will
+    In this section of the report I will create a use case diagram containing the relevant actors of the system and break down why they are there. After I will
     take one of these use cases and expand on it in a use case description. Finally I will list some of the user requirements and functional and non-functional system
     requirements.
 
     \subsection{Use Cases}
-    The first thing to do is identify all the potential stakeholders for the project. Below is a viewpoint hierarchy I created to represent these stakeholder.
+    The first thing to do is identify all the potential stakeholders for the project and I split them into 3 main areas: 
+    \begin{itemize}
+      \item \textbf{External} - Includes authorities (Poilce/Ambulance) for emergency situations, a payment processor such as Stripe, local taxi 
+            companies as Uber offers a service to book them through the app and the companies shareholders.
+      \item \textbf{App User (Customer)} - I broke this down into two stakeholders, the driver and rider as they are the users of the app.
+      \item \textbf{Uber Systems} - Includes both human and non human actors. On the human side there is a customer service representative that deals with any
+            user complaints and software developers. On the opposite side there is the automated systems put int place by Uber, rating system, booking system, automated help system,
+            and surge system.
+    \end{itemize}
+    There are more stakeholders such as the CEO, CFO and more general business roles. However I wanted to keep the stakeholders confined to the app experience.
+    Below is a viewpoint hierarchy I created to represent these stakeholder.
     \begin{figure}[H]
       \centering
       \includegraphics[width=12cm]{assets/viewpoints.drawio.png}
@@ -174,42 +184,46 @@
 
     \subsection{Requirements}
 
+    Below are some user and system requirements I have determined for Ubers' system. At the end of each system requirement I have prepended either an \textbf{F}
+    or a \textbf{NF}. These specify whether the system requirement is funtional or non-functional.
+
     \begin{enumerate}
       \item The system \textbf{must} allow a rider to request a ride.
       \begin{enumerate}[label=1.\arabic{*}]
-        \item A rider \textbf{must} be able to select a pickup point.
+        \item (\textbf{F}) A rider \textbf{must} be able to select a pickup point.
         \begin{enumerate}[label=1.1.\arabic{*}]
-          \item A rider \textbf{must} be able to manually enter a postcode or location for their pickup point.
-          \item A rider \textbf{should} be able to use their current location (calculated via GPS) as their pickup point.
+          \item (\textbf{F}) A rider \textbf{must} be able to manually enter a postcode or location for their pickup point. 
+          \item (\textbf{F}) A rider \textbf{should} be able to use their current location (calculated via GPS) as their pickup point.
         \end{enumerate}
-        \item A rider \textbf{must} be able to specify a drop off point.
-        \item A rider \textbf{must} be able to choose the type of vehicle it needs, e.g. number of seats, mobility support etc.
-        \item A rider \textbf{must} be able to cancel a ride.
-        \item A rider \textbf{should} receive push notifications on updates to their ride.
+        \item (\textbf{F}) A rider \textbf{must} be able to specify a drop off point.
+        \item (\textbf{F}) A rider \textbf{must} be able to choose the type of vehicle it needs, e.g. number of seats, mobility support etc.
+        \item (\textbf{F}) A rider \textbf{must} be able to cancel a ride.
+        \item (\textbf{F}) A rider \textbf{should} receive push notifications on updates to their ride.
         \begin{enumerate}[label=1.5.\arabic{*}]
-          \item A rider \textbf{should} receive a notification to leave a rating for their journey.
-          \item A rider \textbf{should} receive a notification on ride accepted.
-          \item A rider \textbf{should} receive a notification on ride cancelled.
-          \item A rider \textbf{could} receive a notification on how far the driver is away.
+          \item (\textbf{F}) A rider \textbf{should} receive a notification to leave a rating for their journey.
+          \item (\textbf{F}) A rider \textbf{should} receive a notification on ride accepted.
+          \item (\textbf{F}) A rider \textbf{should} receive a notification on ride cancelled.
+          \item (\textbf{F}) A rider \textbf{could} receive a notification on how far the driver is away.
         \end{enumerate}
-        \item A rider \textbf{should} be able to see the route the driver is going to take to their destination.
-        \item A rider \textbf{could} be able to alter the exact location of drop off and pickup points.
-        \item A rider \textbf{could} be able to leave notes to help the driver find the pickup point.
+        \item (\textbf{F}) A rider \textbf{should} be able to see the route the driver is going to take to their destination.
+        \item (\textbf{NF}) A rider \textbf{should} not have to wait any more than 20 minutes for a ride to accept.
+        \item (\textbf{F}) A rider \textbf{could} be able to alter the exact location of drop off and pickup points.
+        \item (\textbf{F}) A rider \textbf{could} be able to leave notes to help the driver find the pickup point.x
       \end{enumerate}
 
-      \vspace{.5cm}
+      \newpage
       \item The system \textbf{must} be able to take payment from a rider for a selected journey.
       \begin{enumerate}[label=2.\arabic*]
-        \item The system \textbf{must} be able accept credit/debit payments.
-        \item The system \textbf{should} be able to accept mobile payments from Google and Apple.
-        \item The system \textbf{could} accept cryptocurrency payments, with consent from the driver.
-        \item The system \textbf{won't} accept cash as a payment.
+        \item (\textbf{F}) The system \textbf{must} be able accept credit/debit payments.
+        \item (\textbf{F}) The system \textbf{should} be able to accept mobile payments from Google and Apple.
+        \item (\textbf{F}) The system \textbf{could} accept cryptocurrency payments, with consent from the driver.
+        \item (\textbf{F}) The system \textbf{won't} accept cash as a payment.
       \end{enumerate}
 
       \vspace{.5cm}
       \item The system \textbf{must} allow both riders and drivers to sign up to the service.
       \begin{enumerate}[label=3.\arabic{*}]
-        \item A customer (Rider/Driver) \textbf{must} be given a form to enter their:
+        \item (\textbf{F}) A customer (Rider/Driver) \textbf{must} be given a form to enter their:
         \begin{itemize}
           \item name
           \item email
@@ -218,36 +232,36 @@
           \item banking details
         \end{itemize}
         \begin{enumerate}[label=3.1.\arabic{*}]
-          \item A customer \textbf{must} be shown any inputs that fail validation.
-          \item A customers banking details \textbf{must} be valid.
-          \item A customers phone number \textbf{should} be validated using regex.
-          \item A customers email \textbf{should} be validated using regex.
-          \item A customers password \textbf{could} be checked for strength.
+          \item (\textbf{F}) A customer \textbf{must} be shown any inputs that fail validation.
+          \item (\textbf{F}) A customers banking details \textbf{must} be valid.
+          \item (\textbf{F}) A customers phone number \textbf{should} be validated using regex.
+          \item (\textbf{F}) A customers email \textbf{should} be validated using regex.
+          \item (\textbf{F}) A customers password \textbf{could} be checked for strength.
         \end{enumerate}
-        \item Uber \textbf{must} check a drivers background to align with regulations in that drivers area.
-        \item A customer (Rider/Driver) \textbf{must} be shown the terms and conditions.
+        \item (\textbf{NF}) Uber \textbf{must} check a drivers background to align with regulations in that drivers area.
+        \item (\textbf{F}) A customer (Rider/Driver) \textbf{must} be shown the terms and conditions.
         \begin{enumerate}[label=3.3.\arabic{*}]
-          \item A customer (Rider/Driver) \textbf{must} accept the terms and conditions.
-          \item A customer (Rider/Driver) \textbf{should} have to scroll through before accepting the terms and conditions.
+          \item (\textbf{F}) A customer (Rider/Driver) \textbf{must} accept the terms and conditions.
+          \item (\textbf{F}) A customer (Rider/Driver) \textbf{should} have to scroll through before accepting the terms and conditions.
         \end{enumerate}
-        \item A customer (Rider/Driver) \textbf{should} be notified on successful sign up.
-        \item A customer (Rider/Driver) \textbf{should} not have to sign in again on the device they successfully signed up on.
-        \item A customer (Rider/Driver) \textbf{could} be able to sign up using a third party (Google, Facebook etc.).
+        \item (\textbf{F}) A customer (Rider/Driver) \textbf{should} be notified on successful sign up.
+        \item (\textbf{F}) A customer (Rider/Driver) \textbf{should} not have to sign in again on the device they successfully signed up on.
+        \item (\textbf{F}) A customer (Rider/Driver) \textbf{could} be able to sign up using a third party (Google, Facebook etc.).
       \end{enumerate}
 
-      \vspace{.5cm}
+      \newpage
       \item The system \textbf{must} offer safety features for customers (both rider and drivers).
       \begin{enumerate}[label=4.\arabic{*}]
-        \item The system \textbf{must} anonymise customers phone numbers to prevent communication after a ride.
-        \item The system \textbf{must} have a way for customers to alert authorities in the event of an incident.
+        \item (\textbf{F}) The system \textbf{must} anonymise customers phone numbers to prevent communication after a ride.
+        \item (\textbf{F}) The system \textbf{must} have a way for customers to alert authorities in the event of an incident.
         \begin{itemize}
           \item Police
           \item Fire Department
           \item Ambulance
         \end{itemize}
-        \item Uber \textbf{must} run DBS and background checks on all drivers.
-        \item The system \textbf{should} allow riders to share their trip with friends and family.
-        \item The system \textbf{could} monitor a ride for deviations of route or expected travel time and contact the rider to make sure nothing has happened
+        \item (\textbf{NF}) Uber \textbf{must} run DBS and background checks on all drivers.
+        \item (\textbf{F}) The system \textbf{should} allow riders to share their trip with friends and family.
+        \item (\textbf{F}) The system \textbf{could} monitor a ride for deviations of route or expected travel time and contact the rider to make sure nothing has happened.
       \end{enumerate}
     \end{enumerate}
 
@@ -259,7 +273,7 @@
     \subsection{Activity Diagram}
 
     Below is an activity diagram that represents the 'Schedule Ride' use case previously identified.
-    This diagram assumes that the user has already signed up to the app, so this is not included and does not model anything after the rider and driver have met.
+    This diagram assumes that the user has installed the app and has already signed up to the app, so this is not included and does not model anything after the rider and driver have met.
 
     \begin{figure}[H]
       \centering
@@ -310,7 +324,7 @@
     can tailor specific notifications.
 
     Unlike in previous diagrams, here I am assuming the Rider App device is accepting notifications, otherwise there would be an exception here as the 
-    notification would never reach the Rider App.
+    notification would never reach the Rider App. In addition to this I am once again assuming that actors have installed the app and signed up.
 
     \newpage
     \section{Enterprise Architecture using Archimate}
@@ -434,6 +448,10 @@
       \label{fig:strategyDiagram}
     \end{figure}
 
+    The above diagram assumes that Uber has developers that can quickly make changes to the infrastructure. However the other resources I have listed
+    can be backed up with the evidence I discuss before this section. I also list notoriety as a resource as I am assuming that Uber is extremely well
+    known and this should help bring in strong applicants for jobs.
+
     \newpage
 
     \noindent Alongside the above strategy diagram I have also created a motivation diagram, again using archimate. This shares some of the same sentiment 
@@ -446,6 +464,9 @@
       \caption{Figure showing motivation diagram showing current assessments and drivers of system.}
       \label{fig:motivationsDiagram}
     \end{figure}
+
+    The \textit{'cost of running two separate services'} assesment refers to the driver and rider apps being separate and therefore taking up time. I feel 
+    like the rest of the diagram i quite self explanatory.
 
     \newpage
 

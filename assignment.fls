@@ -647,6 +647,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT assignment.toc
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT ./assets/viewpoints.drawio.png
 INPUT ./assets/viewpoints.drawio.png
 INPUT assets/viewpoints.drawio.png
@@ -672,7 +673,6 @@ INPUT ./assets/authorities_use_case.drawio.png
 INPUT assets/authorities_use_case.drawio.png
 INPUT ./assets/authorities_use_case.drawio.png
 INPUT ./assets/authorities_use_case.drawio.png
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT ./assets/activity_diagram.drawio.png
 INPUT ./assets/activity_diagram.drawio.png
 INPUT assets/activity_diagram.drawio.png
